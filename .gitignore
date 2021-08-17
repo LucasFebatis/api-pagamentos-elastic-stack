@@ -34,3 +34,6 @@ build/
 
 ### Logback ###
 logback/
+
+### Mac OS ###
+.DS_Store
