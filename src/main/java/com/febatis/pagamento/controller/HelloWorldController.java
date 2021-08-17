@@ -2,7 +2,7 @@ package com.febatis.pagamento.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.febatis.pagamento.PaymentType;
+import com.febatis.pagamento.enums.PaymentType;
 import com.febatis.pagamento.model.Greeting;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +32,13 @@ public class HelloWorldController {
     @ResponseBody
     public Greeting throwException(@RequestParam(name="name", required=false, defaultValue="Estranho") String name) {
         throw new RuntimeException("Ocorreu erro: " + name);
+    }
+
+    @GetMapping("/search-faq")
+    @ResponseBody
+    public Greeting searchFaq(@RequestParam String search) {
+        logger.info("search: {}", value("search", search));
+        return new Greeting(counter.incrementAndGet(), String.format(templateType, search));
     }
 
     @PostMapping("/do-payment/{paymentType}")
