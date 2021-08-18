@@ -1,0 +1,6 @@
+2021-08-18 12:06:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSON" not found; SQL statement:
+insert into person (id, name) values (null, ?) [42102-200]
+2021-08-18 12:09:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSON" not found; SQL statement:
+insert into person (id, name) values (null, ?) [42102-200]
