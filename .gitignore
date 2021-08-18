@@ -37,3 +37,6 @@ logback/
 
 ### Mac OS ###
 .DS_Store
+
+### Banco H2 ###
+src/main/resources/data/
